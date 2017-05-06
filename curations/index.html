@@ -8,6 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="css/bulma.css">
+        <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     </head>
@@ -26,23 +28,33 @@
                         <p class="panel-heading">
                             Topics
                         </p>
-                        <a class="panel-block" v-for="c in content">{{ c.heading }}</a>
+                        <a :href="'#item'+c.heading_id" class="panel-block" v-for="c in content">{{ c.heading }}</a>
                     </nav>
                 </div>
                 <div class="column is-9 right-panel">
-
-                    <div class="">
-                        <div class="has-text-centered" v-for="c in content">
-                            <div class="">
+                    <div class="owl-theme">
+                        <div class="owl-controls">
+                            <div class="carousel-dots owl-dots"></div>
+                        </div>
+                    </div>
+                    <div class="owl-carousel owl-theme">
+                        <div :data-hash="'item'+c.heading_id" class="has-text-centered" v-for="c in content">
+                            <div class="content-wrapper">
                                 <h1 class="title is-3">{{ c.heading }}</h1>
                                 <h2 class="subtitle is-5">{{ c.head_desc }}</h2>
                                 <hr>
-                                <div class="content box" v-for="l in c.elements">
-                                    <blockquot class="card-comment">{{ l.comment }}</blockquote>
+                                <div class="content box link-wrapper" v-for="l in c.elements">
+                                    <blockquote class="card-comment">{{ l.comment }}</blockquote>
                                     <a :href="l.url" class="embedly-card" data-card-controls="0" ></a>
                                 </div>
                             </div>
                             <br><br>
+                        </div>
+                    </div>
+
+                    <div class="owl-theme">
+                        <div class="owl-controls">
+                            <div class="carousel-nav owl-nav"></div>
                         </div>
                     </div>
                 </div>
@@ -54,20 +66,22 @@
       src="https://code.jquery.com/jquery-1.12.4.min.js"
       integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
       crossorigin="anonymous"></script>
+    <script src="owl/owl.carousel.min.js"></script>
     <script src="js/data.js"></script>
+    <script>
+        (function(w, d){
+            var id='embedly-platform', n = 'script';
+            if (!d.getElementById(id)){
+                w.embedly = w.embedly || function() {(w.embedly.q = w.embedly.q || []).push(arguments);};
+                var e = d.createElement(n); e.id = id; e.async=1;
+                e.src = ('https:' === document.location.protocol ? 'https' : 'http') + '://cdn.embedly.com/widgets/platform.js';
+                var s = d.getElementsByTagName(n)[0];
+                s.parentNode.insertBefore(e, s);
+            }
+        })(window, document);
+    </script>
     <script src="js/main.js"></script>
-    <!--<script>-->
-        <!--(function(w, d){-->
-            <!--var id='embedly-platform', n = 'script';-->
-            <!--if (!d.getElementById(id)){-->
-                <!--w.embedly = w.embedly || function() {(w.embedly.q = w.embedly.q || []).push(arguments);};-->
-                <!--var e = d.createElement(n); e.id = id; e.async=1;-->
-                <!--e.src = ('https:' === document.location.protocol ? 'https' : 'http') + '://cdn.embedly.com/widgets/platform.js';-->
-                <!--var s = d.getElementsByTagName(n)[0];-->
-                <!--s.parentNode.insertBefore(e, s);-->
-            <!--}-->
-        <!--})(window, document);-->
-    <!--</script>-->
-    <script async src="http://cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+        <!--<script async src="http://cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>-->
     </body>
 </html>
