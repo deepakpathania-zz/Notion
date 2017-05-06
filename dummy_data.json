@@ -1,0 +1,116 @@
+{
+  "1": {
+    "id": 1,
+    "topic": "Aadhaar",
+    "curation_type": "community",
+    "author": "Ankit Mehta",
+    "created_at": "May 5, 2017 2:00",
+    "last_updated": "May 6, 2017 17:00",
+    "curation_desc": "In this page, I am sharing what I think is the best material on Aadhaar. ",
+    "content": [
+      {
+        "heading": "What is Aadhaar?",
+        "heading_id": 1,
+        "head_desc": "Introducing the unique identity number for Indians.",
+        "elements": [
+          {
+            "element_id": 1,
+            "url": "http://www.hindustantimes.com/interactives/aadhaar-mandatory-schemes-timeline/",
+            "type": "article",
+            "headline": "You need Aadhaar for all these services",
+            "comment": "List of all government programmes for which Aadhaar has been made mandatory",
+            "selected_text": "Of the 61 services for which Aadhaar is required, all, barring 10, are welfare schemes."
+          },
+          {
+            "element_id": 2,
+            "url": "http://www.hindustantimes.com/interactives/aadhaar-mandatory-schemes-timeline/",
+            "type": "article",
+            "headline": "You need Aadhaar for all these services",
+            "comment": "List of all government programmes for which Aadhaar has been made mandatory",
+            "selected_text": "Of the 61 services for which Aadhaar is required, all, barring 10, are welfare schemes."
+          }
+        ]
+      },
+      {
+        "heading": "What it means for you?",
+        "heading_id": 2,
+        "head_desc": "Utility of Aadhaar for individuals",
+        "elements": [
+          {
+            "element_id": 1,
+            "url": "http://www.hindustantimes.com/interactives/aadhaar-mandatory-schemes-timeline/",
+            "type": "article",
+            "headline": "You need Aadhaar for all these services",
+            "comment": "List of all government programmes for which Aadhaar has been made mandatory",
+            "selected_text": "Of the 61 services for which Aadhaar is required, all, barring 10, are welfare schemes."
+          },
+          {
+            "element_id": 2,
+            "url": "http://www.hindustantimes.com/interactives/aadhaar-mandatory-schemes-timeline/",
+            "type": "article",
+            "headline": "You need Aadhaar for all these services",
+            "comment": "List of all government programmes for which Aadhaar has been made mandatory",
+            "selected_text": "Of the 61 services for which Aadhaar is required, all, barring 10, are welfare schemes."
+          }
+        ]
+      }
+    ]
+  },
+  "2": {
+    "id": 1,
+    "topic": "Aadhaar",
+    "curation_type": "community",
+    "author": "Ankit Mehta",
+    "created_at": "May 5, 2017 2:00",
+    "last_updated": "May 6, 2017 17:00",
+    "curation_desc": "In this page, I am sharing what I think is the best material on Aadhaar. ",
+    "content": [
+      {
+        "heading": "What is Aadhaar?",
+        "heading_id": 1,
+        "head_desc": "Introducing the unique identity number for Indians.",
+        "elements": [
+          {
+            "element_id": 1,
+            "url": "http://www.hindustantimes.com/interactives/aadhaar-mandatory-schemes-timeline/",
+            "type": "article",
+            "headline": "You need Aadhaar for all these services",
+            "comment": "List of all government programmes for which Aadhaar has been made mandatory",
+            "selected_text": "Of the 61 services for which Aadhaar is required, all, barring 10, are welfare schemes."
+          },
+          {
+            "element_id": 2,
+            "url": "http://www.hindustantimes.com/interactives/aadhaar-mandatory-schemes-timeline/",
+            "type": "article",
+            "headline": "You need Aadhaar for all these services",
+            "comment": "List of all government programmes for which Aadhaar has been made mandatory",
+            "selected_text": "Of the 61 services for which Aadhaar is required, all, barring 10, are welfare schemes."
+          }
+        ]
+      },
+      {
+        "heading": "What it means for you?",
+        "heading_id": 2,
+        "head_desc": "Utility of Aadhaar for individuals",
+        "elements": [
+          {
+            "element_id": 1,
+            "url": "http://www.hindustantimes.com/interactives/aadhaar-mandatory-schemes-timeline/",
+            "type": "article",
+            "headline": "You need Aadhaar for all these services",
+            "comment": "List of all government programmes for which Aadhaar has been made mandatory",
+            "selected_text": "Of the 61 services for which Aadhaar is required, all, barring 10, are welfare schemes."
+          },
+          {
+            "element_id": 2,
+            "url": "http://www.hindustantimes.com/interactives/aadhaar-mandatory-schemes-timeline/",
+            "type": "article",
+            "headline": "You need Aadhaar for all these services",
+            "comment": "List of all government programmes for which Aadhaar has been made mandatory",
+            "selected_text": "Of the 61 services for which Aadhaar is required, all, barring 10, are welfare schemes."
+          }
+        ]
+      }
+    ]
+  }
+}
