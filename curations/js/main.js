@@ -17,7 +17,7 @@ $(document).ready(function(){
         navContainer: ".carousel-nav",
         dotsContainer: ".carousel-dots"
     });
-    embedly('on', 'card.rendered', function(iframe){
-        owl.trigger('refresh.owl.carousel');
-    });
+    // embedly('on', 'card.rendered', function(iframe){
+    //     owl.trigger('refresh.owl.carousel');
+    // });
 });

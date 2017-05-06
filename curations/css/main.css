@@ -1,14 +1,49 @@
 body{
-    padding: 40px;
+    padding: 20px;
+    background: #fafafa!important;
+}
+section {
+	background: none !important;
+}
+blockquote {
+font-family: Georgia, serif;
+font-size: 18px;
+font-style: italic;
+width: 100%;
+margin: 0.25em 0;
+padding: 0.25em 40px;
+line-height: 1.45;
+position: relative;
+color: #383838;
+background: rgba(245, 245, 245, 0.64) !important;
+}
+blockquote:before {
+display: block;
+content: "\201C";
+font-size: 80px;
+position: absolute;
+left: -20px;
+top: -20px;
+color: #7a7a7a;
+}
+blockquote cite {
+color: #999999;
+font-size: 14px;
+display: block;
+margin-top: 5px;
+}
+ 
+blockquote cite:before {
+content: "\2014 \2009";
 }
 .left-panel {
     height: 100%;
-    overflow: scroll;
+    /*overflow: scroll;*/
     padding-right: 20px;
     /*border-right: 1px solid #ccc;*/
 }
 .right-panel{
-
+	padding: 0px !important;
 }
 .content blockquote{
     border-left: none;
@@ -22,4 +57,29 @@ body{
 .owl-carousel{
     min-width: 0;
     overflow-y: hidden;
+}
+.leftitem {
+	border-bottom: 1px solid rgba(0,0,0,.0785)!important;
+	padding-top: 35px;
+	padding-bottom: 30px;
+}
+.leftauthor {
+	padding-top: 15px;
+	font-size: 17px !important;
+}
+.leftdesc {
+	border-bottom: 1px solid rgba(0,0,0,.0785)!important;
+	padding-bottom: 25px;
+}
+.author {
+	color: #00ab6b;
+}
+.contentcard {
+	background: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,.04);
+    border: 1px solid rgba(0,0,0,.09);
+    border-radius: 3px;
+}
+.limit {
+	max-height: 100%;margin-left: 20%;position: relative;border: 1px solid #dedede;max-width: 60%;
 }

@@ -18,12 +18,11 @@
             <div class="container columns" id="app">
                 <div class="column is-3 left-panel">
 
-                    <h1 class="title is-1">{{ topic }}</h1>
-                    <h2 class="subtitle is-5">By {{ author }} <br> Updated: {{ last_updated }}</h2>
-                    <div class="content is-medium">
+                    <h1 class=" leftitem title is-1">{{ topic }}</h1>
+                    <h2 class="subtitle is-5 leftauthor">By <span class="author">{{ author }}</span> <br> Updated: {{ last_updated }}</h2>
+                    <div class="content is-medium leftdesc">
                         <p>{{ curation_desc }}</p>
                     </div>
-                    <br><br>
                     <nav class="panel">
                         <p class="panel-heading">
                             Topics
@@ -43,45 +42,80 @@
                                 <h1 class="title is-3">{{ c.heading }}</h1>
                                 <h2 class="subtitle is-5">{{ c.head_desc }}</h2>
                                 <hr>
-                                <div class="content box link-wrapper" v-for="l in c.elements">
-                                    <blockquote class="card-comment">{{ l.comment }}</blockquote>
-                                    <a :href="l.url" class="embedly-card" data-card-controls="0" ></a>
+                                <div class="content box link-wrapper contentcard" v-for="l in c.elements">
+                                    <blockquote class="">{{ l.comment }}<br/> - {{ l.selected_text}}</blockquote>
+                                    
+                                    <div class="limit">
+                                    <a :href="l.url" class="embedly-card" data-card-controls="0" data-iframely-url class="limit"></a>
+                                    <div class="link-preview">
+                                        <h1 id="link-description"></h1>
+                                    </div>
+                                </div>
                                 </div>
                             </div>
                             <br><br>
                         </div>
                     </div>
 
-                    <div class="owl-theme">
-                        <div class="owl-controls">
-                            <div class="carousel-nav owl-nav"></div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
 
     <script src="https://unpkg.com/vue"></script>
     <script
-      src="https://code.jquery.com/jquery-1.12.4.min.js"
+        src="https://code.jquery.com/jquery-1.12.4.min.js"
       integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
       crossorigin="anonymous"></script>
     <script src="owl/owl.carousel.min.js"></script>
     <script src="js/data.js"></script>
+    <script async charset="utf-8"
+        src="//cdn.iframe.ly/embed.js?api_key=329520a5255ea60834c299" 
+    ></script>
+    <script type="text/javascript">
+        // $(window).load(function() {
+        //     var target = new Array();
+        //     target.push($('[id^=previewlink]').attr("href"));
+        //     console.log("target : " +target );
+        //     var i=0;
+        //         $.ajax({
+        //             url: "http://api.linkpreview.net",
+        //             dataType: 'jsonp',
+        //             data: {q: target, key: '590e15eb9a9945a22ca17654264e74c81ce3a4c4901e3'},
+        //             success: function (answer) {
+        //                 console.log(answer);
+        //                 console.log()
+        //                 $(`#link-description`).text(answer.description);
+        //             }
+        //         });
+        // });
+        $(document).ready(function() {
+    $('#slider').on('initialized.owl.carousel change.owl.carousel changed.owl.carousel', function(e) { 
+        if (!e.namespace || e.type != 'initialized' && e.property.name != 'position') return
+
+        var current = e.relatedTarget.current()
+        var items = $(this).find('.owl-stage').children()
+        var add = e.type == 'changed' || e.type == 'initialized'
+
+        items.eq(e.relatedTarget.normalize(current)).toggleClass('current', add)
+    }).owlCarousel({
+        items : 2,        
+        nav: true,
+        loop: true,        
+    });
+});
+    </script>
     <script>
-        (function(w, d){
-            var id='embedly-platform', n = 'script';
-            if (!d.getElementById(id)){
-                w.embedly = w.embedly || function() {(w.embedly.q = w.embedly.q || []).push(arguments);};
-                var e = d.createElement(n); e.id = id; e.async=1;
-                e.src = ('https:' === document.location.protocol ? 'https' : 'http') + '://cdn.embedly.com/widgets/platform.js';
-                var s = d.getElementsByTagName(n)[0];
-                s.parentNode.insertBefore(e, s);
-            }
-        })(window, document);
+        // (function(w, d){
+        //     var id='embedly-platform', n = 'script';
+        //     if (!d.getElementById(id)){
+        //         w.embedly = w.embedly || function() {(w.embedly.q = w.embedly.q || []).push(arguments);};
+        //         var e = d.createElement(n); e.id = id; e.async=1;
+        //         e.src = ('https:' === document.location.protocol ? 'https' : 'http') + '://cdn.embedly.com/widgets/platform.js';
+        //         var s = d.getElementsByTagName(n)[0];
+        //         s.parentNode.insertBefore(e, s);
+        //     }
+        // })(window, document);
     </script>
     <script src="js/main.js"></script>
-
-        <!--<script async src="http://cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>-->
     </body>
 </html>
