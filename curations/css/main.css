@@ -1,0 +1,12 @@
+body{
+    padding: 40px;
+}
+.left-panel {
+    height: 100%;
+    overflow: scroll;
+    padding-right: 20px;
+    border-right: 1px solid #ccc;
+}
+.right-panel{
+
+}
