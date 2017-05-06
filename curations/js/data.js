@@ -24,10 +24,18 @@ var data = {
           {
             "element_id": 2,
             "url": "https://twitter.com/ajlkn/status/854395787828219906/",
-            "type": "article",
-            "headline": "You need Aadhaar for all these services",
-            "comment": "List of all government programmes for which Aadhaar has been made mandatory",
-            "selected_text": "Of the 61 services for which Aadhaar is required, all, barring 10, are welfare schemes."
+            "type": "tweet",
+            "headline": "Just another tweet for citing.",
+            "comment": "Rad tweet that will change your life.",
+            "selected_text": "THIS TWEET IS THE BOMB."
+          },
+          {
+            "element_id": 3,
+            "url": "https://youtu.be/0yW7w8F2TVA",
+            "type": "video",
+            "headline": "Say you won't let go.",
+            "comment": "Our song. <3",
+            "selected_text": "This song is love."
           }
         ]
       },

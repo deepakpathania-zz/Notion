@@ -14,7 +14,8 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     </head>
     <body>
-        <section class="section">
+        <div id="load"></div>
+        <section class="section" id="contents">
             <div class="container columns" id="app">
                 <div class="column is-3 left-panel">
 
@@ -30,7 +31,7 @@
                         <a :href="'#item'+c.heading_id" class="panel-block" v-for="c in content">{{ c.heading }}</a>
                     </nav>
                 </div>
-                <div class="column is-9 right-panel">
+                <div class="column is-9 right-panel mbot">
                     <div class="owl-theme">
                         <div class="owl-controls">
                             <div class="carousel-dots owl-dots"></div>
@@ -105,6 +106,18 @@
 });
     </script>
     <script>
+        document.onreadystatechange = function () {
+          var state = document.readyState
+          if (state == 'interactive') {
+               document.getElementById('contents').style.visibility="hidden";
+          } else if (state == 'complete') {
+              setTimeout(function(){
+                 document.getElementById('interactive');
+                 document.getElementById('load').style.visibility="hidden";
+                 document.getElementById('contents').style.visibility="visible";
+              },1000);
+          }
+        }
         // (function(w, d){
         //     var id='embedly-platform', n = 'script';
         //     if (!d.getElementById(id)){
