@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Notion | Curate Feed</title>
+      <link rel="stylesheet" type="text/css" href="css/bulma.css">
+      <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
+      <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+
+   </head>
+   <body>
+      <nav class="nav" style="border-bottom: 2px solid black;">
+         <div class="nav-left">
+            <a class="nav-item">
+               <h2>NOTION</h2>
+            </a>
+         </div>
+         <div class="nav-center">
+            <a class="nav-item">
+	            <span class="icon">
+	            <i class="fa fa-github"></i>
+	            </span>
+            </a>
+            <a class="nav-item">
+	            <span class="icon">
+	            <i class="fa fa-twitter"></i>
+	            </span>
+            </a>
+         </div>
+         <div class="nav-right nav-menu">
+            <a class="nav-item">Home</a>
+            <a class="nav-item">Profile</a>
+            <a class="nav-item">About</a>
+         </div>
+      </nav>
+      <section class="section">
+         <div class="container columns" id="app">
+            <div class="column is-3 left-panel">
+               <h1 class="title is-1">Aadhaar</h1>
+               <h2 class="subtitle is-5">By Samarth Bansal</h2>
+               <div class="content is-medium">
+                  <p>Curate here!</p>
+               </div>
+               <br><br>
+               <nav class="panel">
+                  <p class="panel-heading">
+                     Topics
+                  </p>
+                  <a class="panel-block" data-bind="visible: sectionList().length==0">Nothing so far. Add?</a>
+
+                  <div data-bind="foreach: sectionList">
+                     <a href="" class="panel-block" data-bind="text: sectionHeading"></a>
+                     <div id="remVar" data-bind="click: removeSection" class="button">Remove Section
+                     </div>
+                  </div>
+
+                  <br>
+                  <br>
+
+                  <form data-bind="submit: addNewSection">
+                     <label class="label section-heading">Section Heading</label>
+                     <p class="control">
+                        <input class="input" id="sec_name" required>
+                     </p>
+                     <label class="label section-description">Description</label>
+                     <p class="control">
+                        <textarea class="input" id="sec_desc" rows="10" style="width: 100%" required>
+                        </textarea> 
+                     </p>
+                     <div id="addSec">
+                        <button class = "button" type="submit">Add Section</button>
+                     </div>
+                  </form>
+               </nav>
+            </div>
+            <div class="column is-9 right-panel">
+               <div class="content-wrapper">
+                  <h1 class="title is-3">Curation Editor</h1>
+                  <h2 class="subtitle is-5">Add sections and link</h2>
+                  <hr>
+                  <br><br>
+                  <div class="noSectionNotice" data-bind="visible: sectionList().length==0">No data yet. Add elements on the right panel to begin curation.</div>
+                  <div data-bind="foreach: sectionList">
+                     <div class="content-wrapper section-card has-text-centered" ">
+                        <input type="text" class="title is-3 secHeadDynamic" data-bind="textInput: sectionHeading">
+                        <br>
+                        <!-- <h1 class="title is-3" data-bind="text: sectionHeading"></h1> -->
+                        <textarea class="subtitle is-5 headDescDynamic" data-bind="textInput: head_desc" onchange="textAreaAdjust(this)" onkeyup="textAreaAdjust(this)" style="overflow:hidden"></textarea>
+                        <hr>
+                     </div>
+
+                     <div class="noElementNotice" data-bind="visible: elementList().length==0">No elements for this section yet. Start adding now!</div>
+                     <div data-bind="foreach: elementList">
+                        <div class="content box link-wrapper">
+                           <!--Toggle button-->
+                           <div class="tabs is-toggle">
+                              <ul>
+                                 <li class="">
+                                    <a>
+                                    <span class="icon is-small"><i class="fa fa-pencil-square-o "></i></span>
+                                    <span>Edit</span>
+                                    </a>
+                                 </li>
+                                 <li class="is-active">
+                                    <a>
+                                    <span class="icon is-small"><i class="fa fa-eye"></i></span>
+                                    <span>Preview</span>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="element-section element-edit">
+                              <div class="field element-heading">
+                                 <div id="removeVar" data-bind="click: $parent.removeElement" class="button">Remove Element</div>
+                                 <label class="label" data-bind="">Link</label>
+                                 <p class="control">
+                                    <input class="input" type="text" data-bind="textInput: linkHead" placeholder="Link Heading">
+                                 </p>
+                              </div>
+                              <div class="field element-url">
+                                 <label class="label">URL</label>
+                                 <p class="control">
+                                    <input class="input" type="text" data-bind="textInput: linkUrl" placeholder="Add link">
+                                 </p>
+                                 <label class="label">Comment</label>
+                                 <p class="control">
+                                    <textarea class="textarea" data-bind="textInput: linkComment" placeholder="Your comment about this link"></textarea>
+                                 </p>
+                              </div>
+                              <a data-bind="attr: {href: linkUrl}" class="embedly-card" data-card-controls="0" >Just to chek</a>
+                              <blockquote class="card-comment">
+                                 <span data-bind="text: linkComment" class="embedly-card" data-card-controls="0" >
+                              </blockquote>
+                              <div class="limit">
+                                 <a data-bind="attr: {href: linkUrl}" class="embedly-card" data-card-controls="0" data-iframely-url class="limit"></a>
+                                 <!--                                     <a data-bind="" href="www.hindustantimes.com/interactives/aap-government-two-years-report-card/" class="embedly-card" data-card-controls="0" data-iframely-url class="limit"></a>
+                                    -->
+                                 <div class="link-preview">
+                                    <h1 id="link-description"></h1>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="addVar" data-bind="click: addElement" class="button">
+                        Add element
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         </div>
+         </div>
+      </section>
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+      <script src="js/app1.js"></script>
+      <script async charset="utf-8" src="//cdn.iframe.ly/embed.js?api_key=329520a5255ea60834c299"></script>
+   </body>
+</html>

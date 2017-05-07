@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notion | Curate Feed</title>
+
+	<link rel="stylesheet" type="text/css" href="css/bulma.css">
+	<link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+<nav class="nav" style="border-bottom: 2px solid black;">
+  <div class="nav-left">
+    <a class="nav-item">
+      <h2>NOTION</h2>
+    </a>
+  </div>
+
+  <div class="nav-center">
+    <a class="nav-item">
+      <span class="icon">
+        <i class="fa fa-github"></i>
+      </span>
+    </a>
+    <a class="nav-item">
+      <span class="icon">
+        <i class="fa fa-twitter"></i>
+      </span>
+    </a>
+  </div>
+
+
+  <div class="nav-right nav-menu">
+    <a class="nav-item">
+      Home
+    </a>
+    <a class="nav-item">
+      Profile
+    </a>
+    <a class="nav-item">
+      About
+    </a>
+
+
+  </div>
+</nav>
+
+
+<section class="section">
+    <div class="container columns" id="app">
+
+        <div class="column is-3 left-panel">
+            <h1 class="title is-1">Aadhaar</h1>
+            <h2 class="subtitle is-5">By Samarth Bansal</h2>
+            <div class="content is-medium">
+                <p>Curate here!</p>
+            </div>
+            <br><br>
+            <nav class="panel">
+                <p class="panel-heading">
+                    Sections Added
+                </p>
+                <div data-bind="foreach: sectionList">
+                	<a href="" class="panel-block" data-bind="text: sectionHeading"></a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="column is-9 right-panel">
+            <div class="content-wrapper">
+                <h1 class="title is-3">Curation Editor</h1>
+                <h2 class="subtitle is-5">Add sections and link</h2>
+                <hr>
+
+				<div id="addSec" data-bind="click: addSection" class="button">
+					<span class="icon">
+  						<!-- <i class="fa fa-plus-circle"></i> -->
+					</span>
+					Add Section
+				</div>
+				<br><br>
+				
+
+				<div data-bind="foreach: sectionList">
+				<div class="content box link-wrapper section-card">
+					<h1>Section 1</h1>
+					<div class="field">
+						<label class="label section-heading">Section Heading</label>
+						<p class="control">
+							<input class="input" type="text" data-bind="value: sectionHeading" placeholder="What is this section about?">
+				  		</p>
+					</div>
+
+					<div class="field">
+						<label class="label section-description">Description</label>
+						<p class="control">
+							<textarea class="textarea" data-bind="value: head_desc" placeholder="Add a brief description"></textarea>
+						</p>
+					</div>
+
+
+					<div id="addVar" data-bind="click: addElement" class="button">
+					Add element
+					</div>
+					<div class="container elements" data-bind="foreach: elementList">
+					<!-- <div data-bind="with: elementList"> -->
+						<hr>
+						<p data-bind="text: label"></p>
+						<div class="element-section">
+							
+							<div class="field element-heading">
+								<span class="removeVar" data-bind="click: $parent.removeElement">Remove Variable</span>
+								<!-- <span class="removeVar" >Remove Variable</span> -->
+								<label class="label" data-bind="text: ">Link</label>
+								<p class="control">
+									<input class="input" type="text" data-bind="value: linkHead" placeholder="Link Heading">
+								</p>
+							</div>
+
+							<div class="field element-url">
+								<label class="label">URL</label>
+								<p class="control">
+									<input class="input" type="text" data-bind="value: linkUrl" placeholder="Add link">
+								</p>
+							</div>
+
+							<div class="field element-desc">
+								<label class="label">Comment</label>
+								<p class="control">
+									<textarea class="textarea" data-bind="value: linkComment" placeholder="Your comment about this link"></textarea>
+								</p>
+							</div>
+							
+						</div>
+
+					</div>
+					</div>
+				
+			</div>
+            </div>
+        </div>
+    </div>
+
+           
+</section>
+	
+</script>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

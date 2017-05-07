@@ -1,0 +1,76 @@
+.elements{
+	margin-left: 5%;
+	width: 70%
+}
+
+body{
+    padding: 40px;
+}
+.left-panel {
+    height: 100%;
+    overflow: scroll;
+    padding-right: 20px;
+    /*border-right: 1px solid #ccc;*/
+}
+.right-panel{
+
+}
+.content blockquote{
+    border-left: none;
+}
+.content-wrapper{
+    padding: 20px;
+}
+.link-wrapper{
+
+}
+.owl-carousel{
+    min-width: 0;
+    overflow-y: hidden;
+}
+
+.secHeadDynamic{
+	border:none;
+	width: 100%;
+	text-align: center;
+}
+
+.headDescDynamic{
+	border:none;
+	width: 100%;
+	resize: none;
+	text-align: center;
+}
+
+#sec_desc{
+	resize: none;
+	width: 100%;
+}
+
+.textarea-bq{
+	background-color: whitesmoke;
+	border: none;
+	width: 100%;
+	resize: none;
+	outline: none; 
+	border-radius: 0;
+	height: auto;
+    padding: 1.25em 1.5em;
+    min-height: none;
+	font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: '#4a4a4a';
+}
+
+input, textarea, select, a { outline: none; }
+
+.limit {
+	max-height: 100%;margin-left: 20%;position: relative;border: 1px solid #dedede;max-width: 60%;
+}
+.iframely-widget-container{
+	border: 0px !important;
+}
+.mbot {
+	margin-bottom: -50px;
+}
