@@ -15,7 +15,7 @@ padding: 0.25em 40px;
 line-height: 1.45;
 position: relative;
 color: #383838;
-background: rgba(245, 245, 245, 0.40) !important !important;
+background: rgba(245, 245, 245, 0.40) !important;
 }
 blockquote:before {
 display: block;

@@ -62,62 +62,15 @@
             </div>
         </section>
 
-    <script src="https://unpkg.com/vue"></script>
+    <script src="js/vue.js"></script>
     <script
-        src="https://code.jquery.com/jquery-1.12.4.min.js"
-      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-      crossorigin="anonymous"></script>
+        src="js/jquery.min.js"></script>
     <script src="owl/owl.carousel.min.js"></script>
     <script src="js/data.js"></script>
     <script async charset="utf-8"
         src="//cdn.iframe.ly/embed.js?api_key=329520a5255ea60834c299" 
     ></script>
-    <script type="text/javascript">
-        // $(window).load(function() {
-        //     var target = new Array();
-        //     target.push($('[id^=previewlink]').attr("href"));
-        //     console.log("target : " +target );
-        //     var i=0;
-        //         $.ajax({
-        //             url: "http://api.linkpreview.net",
-        //             dataType: 'jsonp',
-        //             data: {q: target, key: '590e15eb9a9945a22ca17654264e74c81ce3a4c4901e3'},
-        //             success: function (answer) {
-        //                 console.log(answer);
-        //                 console.log()
-        //                 $(`#link-description`).text(answer.description);
-        //             }
-        //         });
-        // });
-        $(document).ready(function() {
-    $('#slider').on('initialized.owl.carousel change.owl.carousel changed.owl.carousel', function(e) { 
-        if (!e.namespace || e.type != 'initialized' && e.property.name != 'position') return
-
-        var current = e.relatedTarget.current()
-        var items = $(this).find('.owl-stage').children()
-        var add = e.type == 'changed' || e.type == 'initialized'
-
-        items.eq(e.relatedTarget.normalize(current)).toggleClass('current', add)
-    }).owlCarousel({
-        items : 2,        
-        nav: true,
-        loop: true,        
-    });
-});
-    </script>
     <script>
-        document.onreadystatechange = function () {
-          var state = document.readyState
-          if (state == 'interactive') {
-               document.getElementById('contents').style.visibility="hidden";
-          } else if (state == 'complete') {
-              setTimeout(function(){
-                 document.getElementById('interactive');
-                 document.getElementById('load').style.visibility="hidden";
-                 document.getElementById('contents').style.visibility="visible";
-              },1000);
-          }
-        }
         // (function(w, d){
         //     var id='embedly-platform', n = 'script';
         //     if (!d.getElementById(id)){
