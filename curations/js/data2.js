@@ -3,13 +3,13 @@ var data = {
     "id": 1,
     "topic": "Nirbhaya Case",
     "curation_type": "community",
-    "author": "Deepak",
+    "author": "Automatic",
     "created_at": "May 4, 2017 2:00",
     "last_updated": "May 7, 2017 17:00",
-    "curation_desc": "In this page, I am sharing the timeline of events of Nirbhaya Case. ",
+    "curation_desc": "Nirbhaya Gang Rape Case",
     "content": [
       {
-        "heading": "Nirbhaya Case - timeline",
+        "heading": "Timeline",
         "heading_id": 1,
         "head_desc": "",
         "elements": [
@@ -40,7 +40,7 @@ var data = {
         ]
       },
         {
-        "heading": "Who were the culprits ?",
+        "heading": "Culprits",
         "heading_id": 2,
         "head_desc": "The guys who shook the nation by their act.",
         "elements": [

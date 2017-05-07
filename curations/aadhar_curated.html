@@ -1,0 +1,87 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Notion</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bulma.css">
+        <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id="load"></div>
+        <section class="section" id="contents">
+            <div class="container columns" id="app">
+                <div class="column is-3 left-panel">
+
+                    <h1 class=" leftitem title is-1">{{ topic }}</h1>
+                    <h2 class="subtitle is-5 leftauthor">By <span class="author">{{ author }}</span> <br> Updated: {{ last_updated }}</h2>
+                    <div class="content is-medium leftdesc">
+                        <p>{{ curation_desc }}</p>
+                    </div>
+                    <nav class="panel">
+                        <p class="panel-heading">
+                            Topics
+                        </p>
+                        <a :href="'#item'+c.heading_id" class="panel-block" v-for="c in content">{{ c.heading }}</a>
+                    </nav>
+                </div>
+                <div class="column is-9 right-panel mbot">
+                    <div class="owl-theme">
+                        <div class="owl-controls">
+                            <div class="carousel-dots owl-dots"></div>
+                        </div>
+                    </div>
+                    <div class="owl-carousel owl-theme">
+                        <div :data-hash="'item'+c.heading_id" class="has-text-centered" v-for="c in content">
+                            <div class="content-wrapper">
+                                <h1 class="title is-3">{{ c.heading }}</h1>
+                                <h2 class="subtitle is-5">{{ c.head_desc }}</h2>
+                                <hr>
+                                <div class="content box link-wrapper contentcard" v-for="l in c.elements">
+                                    <blockquote class="">{{ l.comment }}<br/> - {{ l.selected_text}}</blockquote>
+                                    
+                                    <div class="limit">
+                                    <a :href="l.url" class="embedly-card" data-card-controls="0" data-iframely-url class="limit"></a>
+                                    <div class="link-preview">
+                                        <h1 id="link-description"></h1>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <br><br>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    <script src="js/vue.js"></script>
+    <script
+        src="js/jquery.min.js"></script>
+    <script src="owl/owl.carousel.min.js"></script>
+    <script src="js/aadhaar.js"></script>
+    <script async charset="utf-8"
+        src="//cdn.iframe.ly/embed.js?api_key=329520a5255ea60834c299" 
+    ></script>
+    <script>
+        // (function(w, d){
+        //     var id='embedly-platform', n = 'script';
+        //     if (!d.getElementById(id)){
+        //         w.embedly = w.embedly || function() {(w.embedly.q = w.embedly.q || []).push(arguments);};
+        //         var e = d.createElement(n); e.id = id; e.async=1;
+        //         e.src = ('https:' === document.location.protocol ? 'https' : 'http') + '://cdn.embedly.com/widgets/platform.js';
+        //         var s = d.getElementsByTagName(n)[0];
+        //         s.parentNode.insertBefore(e, s);
+        //     }
+        // })(window, document);
+    </script>
+    <script src="js/main.js"></script>
+    </body>
+</html>
