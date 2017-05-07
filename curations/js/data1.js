@@ -23,19 +23,19 @@ var data = {
           },
           {
             "element_id": 2,
-            "url": "https://twitter.com/ajlkn/status/854395787828219906/",
+            "url": "https://twitter.com/narendramodi/status/453543852175925248?lang=en",
             "type": "tweet",
-            "headline": "Just another tweet for citing.",
-            "comment": "Rad tweet that will change your life.",
-            "selected_text": "THIS TWEET IS THE BOMB."
+            "headline": "Tweet about Aadhaar",
+            "comment": "Security threat about aadhaar",
+            "selected_text": "Concerns regarding security issues of Aadhaar."
           },
           {
             "element_id": 3,
-            "url": "https://youtu.be/0yW7w8F2TVA",
+            "url": "https://youtu.be/mlwMjlUs0uU",
             "type": "video",
-            "headline": "Say you won't let go.",
-            "comment": "Our song. <3",
-            "selected_text": "This song is love."
+            "headline": "Flaws in Aadhaar card.",
+            "comment": "Flaws in Aadhaar card.",
+            "selected_text": "Things aren't as bright as they seem."
           }
         ]
       },
@@ -46,11 +46,11 @@ var data = {
         "elements": [
           {
             "element_id": 1,
-            "url": "http://www.hindustantimes.com/interactives/aadhaar-mandatory-schemes-timeline/",
+            "url": "http://www.livemint.com/Money/xJy8FbRFOUeGoR6lvzgkAL/Aadhaar-Pay-to-be-launched-soon-What-it-means-for-you.html",
             "type": "article",
-            "headline": "You need Aadhaar for all these services",
-            "comment": "List of all government programmes for which Aadhaar has been made mandatory",
-            "selected_text": "Of the 61 services for which Aadhaar is required, all, barring 10, are welfare schemes."
+            "headline": "Aadhaar pay to be launched soon.",
+            "comment": "Aadhaar pay to be launched soon.",
+            "selected_text": "USSD allows you to do electronic payment without an app or a smartphone."
           },
           {
             "element_id": 2,
@@ -59,7 +59,8 @@ var data = {
             "headline": "You need Aadhaar for all these services",
             "comment": "List of all government programmes for which Aadhaar has been made mandatory",
             "selected_text": "Of the 61 services for which Aadhaar is required, all, barring 10, are welfare schemes."
-          }
+          },
+
         ]
       }
     ]
